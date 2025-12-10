@@ -35,14 +35,7 @@ const RoleSelectionModal = ({ isOpen, onClose, isLogin }) => {
           >
             I am a Seller
           </button>
-          {isLogin && (
-            <button 
-              className="role-btn admin-btn"
-              onClick={() => handleRoleSelection('admin')}
-            >
-              I am an Admin
-            </button>
-          )}
+        
         </div>
       </div>
     </div>

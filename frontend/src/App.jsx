@@ -9,8 +9,7 @@ import SellerSignup from './pages/SellerSignup';
 import SellerDashboard from './pages/SellerDashboard';
 import AddProduct from './pages/AddProduct';
 import EditProduct from './pages/EditProduct';
-import AdminLogin from './pages/AdminLogin';
-import AdminDashboard from './pages/AdminDashboard';
+
 
 function App() {
   return (
@@ -31,9 +30,7 @@ function App() {
         <Route path="/seller/add-product" element={<AddProduct />} />
         <Route path="/seller/edit/:id" element={<EditProduct />} />
         
-        {/* Admin Routes */}
-        <Route path="/login/admin" element={<AdminLogin />} />
-        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+     
         
         {/* Catch all - redirect to home */}
         <Route path="*" element={<Navigate to="/" replace />} />

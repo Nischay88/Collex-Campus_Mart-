@@ -1,5 +1,6 @@
 package com.example.Collex.controller;
 
+
 import com.example.Collex.dto.SignupRequest;
 import com.example.Collex.model.User;
 import com.example.Collex.service.UserService;
@@ -12,14 +13,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/auth")
 @CrossOrigin(origins = "*")
 public class AuthController {
     
     @Autowired
     private UserService userService;
     
-    @PostMapping("/signup")
+    @PostMapping("/auth/signup")
     public ResponseEntity<?> signup(@RequestBody SignupRequest request) {
         try {
             System.out.println("AuthController: Received signup request for: " + request.getEmail());
@@ -96,6 +96,8 @@ public class AuthController {
         userResponse.put("createdAt", user.getCreatedAt());
         return userResponse;
     }
+    
+
     
     private Map<String, Object> createErrorResponse(String message) {
         Map<String, Object> error = new HashMap<>();
